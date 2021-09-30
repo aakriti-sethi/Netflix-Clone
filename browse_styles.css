@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  header
+  {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+ 
+  .logo{
+    /* position: relative; */
+    float: left;
+    margin: 0px 40px;
+    height: 6vh;
+    z-index: 10;
+    transform: translate(-58%, -50%);
+  }
+  .toggle
+  {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background: url('images/menu.png');
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: center;
+    cursor: pointer;
+    filter: invert(1);
+  }
+  .toggle.active
+  {
+    background: url('images/menu.png');
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-position: center;
+    cursor: pointer;
+  }
+  .showcase
+  {
+    position: absolute;
+    right: 0;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: black;
+    transition: 0.5s;
+    z-index: 2;
+  }
+  .showcase.active
+  {
+    right: 300px;
+  }
+  
+  .showcase video
+  {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+  }
+  .overlay
+  {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(75, 136, 206, 0.637);
+    mix-blend-mode: overlay;
+  }
+  .text
+  {
+    position: relative;
+    z-index: 10;
+  }
+  
+  .text h3
+  {
+    font-size: 4em;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1em;
+  }
+  .text p
+  {
+    font-size: 1.1em;
+    color: #fff;
+    margin: 20px 0;
+    font-weight: 400;
+    max-width: 700px;
+  }
+  .text a
+  {
+    display: inline-block;
+    font-size: 1em;
+    background: #fff;
+    padding: 10px 30px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 500;
+    margin-top: 10px;
+    color: #111;
+    letter-spacing: 2px;
+    transition: 0.2s;
+  }
+  .text a:hover
+  {
+    font-size: 1.2em;
+    /* letter-spacing: 6px; */
+  }
+ 
+
+  
+  @media (max-width: 991px)
+  {
+    .showcase,
+    .showcase header
+    {
+      padding: 40px;
+    }
+    .text h2
+    {
+      font-size: 3em;
+    }
+    .text h3
+    {
+      font-size: 2em;
+    }
+  }
