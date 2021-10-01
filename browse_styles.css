@@ -18,33 +18,13 @@
   }
  
   .logo{
-    /* position: relative; */
     float: left;
     margin: 0px 40px;
     height: 6vh;
     z-index: 10;
     transform: translate(-58%, -50%);
   }
-  .toggle
-  {
-    position: relative;
-    width: 60px;
-    height: 60px;
-    background: url('images/menu.png');
-    background-repeat: no-repeat;
-    background-size: 30px;
-    background-position: center;
-    cursor: pointer;
-    filter: invert(1);
-  }
-  .toggle.active
-  {
-    background: url('images/menu.png');
-    background-repeat: no-repeat;
-    background-size: 25px;
-    background-position: center;
-    cursor: pointer;
-  }
+
   .showcase
   {
     position: absolute;
@@ -105,26 +85,21 @@
     font-weight: 400;
     max-width: 700px;
   }
+
   .text a
   {
     display: inline-block;
     font-size: 1em;
     background: #fff;
     padding: 10px 30px;
-    text-transform: uppercase;
     text-decoration: none;
     font-weight: 500;
     margin-top: 10px;
     color: #111;
-    letter-spacing: 2px;
-    transition: 0.2s;
+    border-radius: 4px;
   }
-  .text a:hover
-  {
-    font-size: 1.2em;
-    /* letter-spacing: 6px; */
-  }
- 
+
+
 
   
   @media (max-width: 991px)
@@ -143,3 +118,51 @@
       font-size: 2em;
     }
   }
+
+
+
+.video-container{
+  position: fixed;
+  /* top: 0;
+  left: 0; */
+  
+  width: 80%;
+  height: 80%;
+  z-index: 99999;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s;
+}
+
+
+.video-container .close{
+  position: absolute;
+  top: 5%;
+  right: 25px;
+  font-size: 20px;
+  cursor: pointer;
+  color: white;
+  z-index: 999999;
+}
+
+.video-container video{
+  width: 100%;
+  /* max-width: 500px; */
+  transform: scale(0);
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
+  outline: none;
+  transition: all 0.3s;
+}
+
+.video-container.show{
+  pointer-events: all;
+  opacity: 1;
+}
+
+.video-container.show video{
+  transform: scale(1);
+}

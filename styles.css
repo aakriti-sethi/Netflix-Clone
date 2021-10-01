@@ -13,19 +13,7 @@ body{
 header{
     background-image: url(images/background.jpg);
     height: 94vh;
-    /* opacity: 0.8; */
 }
-
-
-/* .overlay{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(8, 8, 8, 0.6);
-    mix-blend-mode: overlay;
-} */
 
 .hr{
     height: 8px;
@@ -58,15 +46,12 @@ header{
     text-align: center;
     font-size: 22px;
     text-decoration: none;
-    /* height: 50px; */
     width: 14rem;
     margin: 0;
 }
 
 .logo{
-    /* position: flex; */
     float: left;
-    /* margin: 30px 40px; */
     height: 6vh;
     z-index: 10;
     transform: translate(20%, 50%);
@@ -75,6 +60,26 @@ header{
 .showcase{
     position: relative;
     
+}
+
+.showcase-top{
+    position: relative;
+    z-index: 10;
+}
+
+.showcase-top .signpg{
+    border: red;
+    border-radius: 4px;
+    font-size: 16px;
+    background: #E50914;
+    position: flex;
+    float: right;
+    margin: 30px;
+    padding: 8px 18px;
+    text-decoration: none;
+    margin-top: 30px;
+    color: white;
+    text-align: center;
 }
 
 .showcase::after{
@@ -94,7 +99,6 @@ header{
     z-index: 10;
     text-align: center;
     transform: translateY(35%);
-    /* text-align: justify; */
     padding: 75px 0;
     margin: 0 auto;
     max-width: 950px;
@@ -143,9 +147,7 @@ header{
     background-color: rgba(0,0,0,0.75);
     border-radius: 10px;
     box-sizing: border-box;
-    /* transform: translateX(50%); */
     transform: translateY(18%);
-    /* text-align: left; */
 }
 
 .login-body h2{
@@ -242,24 +244,9 @@ header{
     text-decoration: none;
 }
 
-.login-foot{
-    /* clear: left;
-    float: left; 
-    position: relative;
-    left: 50%; */
-    /* align-content: flex-start;
-    float: left; */
-}
-
 .terms{
     color: #737373;
     font-size: 13px;
-    /* display: block;
-    float: left;
-    position: relative;
-    right: 50%; */
-
-    /* text-align: left; */
 }
 
 .terms a{
@@ -285,22 +272,77 @@ header{
     float: left;
     padding: 5vh;
     padding-left: 60px;
-    /* text-align: left; */
 }
 
 .foot-items ul li{
     list-style-type: none;
     padding: 10px 30px;
     text-align: left;
+
 }
 
 .foot-items ul li a{
     text-decoration: none;
-    color: #737373;
+    color: #cec7c7;
+    cursor: pointer;
 }
 
-.foot-ques{
-   
-
+.card-0,
+.card-1,
+.card-2{
+    border-top:8px rgb(69,69,69)solid;
+    padding:50px;
 }
+
+..card-0{
+    position: relative;
+    display: inline-grid;
+    grid-template-columns: 40% 50%;
+    text-align: left;
+    align-items:center;
+    padding: 25px 45px 50px;
+}
+
+
+.desc-0{
+    padding-left: 100px;
+}
+
+.card-1{
+    position: relative;
+    display: inline-grid;
+    grid-template-columns: 50% 40%;
+    text-align: left;
+    align-items:center;
+    padding: 25px 45px 50px;
+}
+
+.desc-1{
+    padding-left: 80px;
+}
+
+.style-cards h1{
+    font-size:3rem;
+    padding: 1rem;
+    padding-left: 0;
+}
+
+.style-cards h3{
+    font-size: 1.6rem;
+    line-height: 2rem
+}
+
+.card-2{
+    position: relative;
+    display: inline-grid;
+    grid-template-columns: 40% 50%;
+    text-align: left;
+    align-items:center;
+    padding: 25px 45px 50px;
+}
+
+.desc-2{
+    padding-left: 100px;
+}
+
 
